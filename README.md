@@ -9,7 +9,6 @@ Kernel Threads in the xv6 Operating System are implemented in this project. This
 
 ```
 int clone(void(*function)(void *, void *), void *stack, int flags, void *arg1, void *arg2);
-
 ```
 
 -   Userland threading library wrapper function calls the clone system call to construct a thread of a process.
@@ -22,7 +21,6 @@ int clone(void(*function)(void *, void *), void *stack, int flags, void *arg1, v
 
 ```
 int join(int threadId);  
-
 ```
 
 -   Join system call to block other threads while it waits for the current thread to finish, and then release thread resources once it has.
@@ -32,7 +30,6 @@ int join(int threadId);
 
 ```
 int gettid();
-
 ```
 
 -   gettid system call to get the thread Id of currently executing thread
@@ -41,7 +38,6 @@ int gettid();
 
 ```
 int tgkill(int tgid, int tid, int sig);
-
 ```
 
 -   tgkill system call to terminate the thread from the thread group with the thread group id and thread id as the tgid and tid, respectively.
